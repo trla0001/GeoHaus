@@ -4,19 +4,32 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import geohaus from "../assets/images/geohaus.svg";
+import moodboard from "../assets/images/moodboard.webp";
 import lpcover from "../assets/images/lpcover.webp";
 import bag from "../assets/images/bag.webp";
 import neon from "../assets/images/neon.webp";
 import g from "../assets/images/letter-g-3d.webp";
 ---
 
-<MainLayout title="GeoHaus">
-  <section>
+<MainLayout title="GeoHaus - Display font">
+  <section id="hero" class="max-w-[1728px] mx-auto mt-32">
     <Image src={geohaus} alt="GeoHaus logo" />
   </section>
-  <section></section>
-  <section class="max-w-7xl mx-auto grid grid-cols-12">
-    <h2 class="col-span-12 row-start-1 justify-self-center">Lorem ipsum</h2>
+  <section id="om" class="max-w-7xl mx-auto mt-32">
+    <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <div class="grid md:grid-cols-2 mt-32">
+      <article class="content-center">
+        <h2 class="">Om GeoHaus</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </article>
+      <Image src={moodboard} alt="moodboard brugt som inspiration til GeoHaus" class="w-[500px] m-auto" />
+    </div>
+  </section>
+  <section id="inspo" class="max-w-7xl mx-auto grid grid-cols-12 mt-32">
+    <h2 class="col-span-12 row-start-1 justify-self-center">Inspiration</h2>
     <div class="col-start-1 col-span-5 row-start-2 row-span-4"><Image src={bag} alt="taske med GeoHaus logo" /></div>
     <div class="col-start-7 col-span-5 row-start-2 row-span-2"><Image src={lpcover} alt="Lp cover med GeoHaus logo" /></div>
     <div class="col-start-8 col-span-5 row-start-4 row-span-2"><Image src={g} alt="Bogstav g med 3D effekt" /></div>
