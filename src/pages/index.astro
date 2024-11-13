@@ -5,6 +5,8 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import geohaus from "../assets/images/geohaus.svg";
 import moodboard from "../assets/images/moodboard.webp";
+import skitse from "../assets/images/skitse.webp";
+import skitse2 from "../assets/images/skitse1.webp";
 import lpcover from "../assets/images/lpcover.webp";
 import bag from "../assets/images/bag.webp";
 import neon from "../assets/images/neon.webp";
@@ -19,7 +21,7 @@ import g from "../assets/images/letter-g-3d.webp";
     <h2 class="md:text-center max-w-prose mx-auto citat">En display font der er inspireret af Bauhaus-stilens enkle og geometriske udtryk. Den bruger gentagne, parallelle linjer til at skabe mønstre og former.</h2>
 
     <div class="grid md:grid-cols-2 mt-32 lg:mt-52 om">
-      <article class="content-center max-w-prose">
+      <article class="content-center max-w-prose pb-10">
         <h1 class="">Om GeoHaus</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -27,8 +29,13 @@ import g from "../assets/images/letter-g-3d.webp";
       </article>
       <div class="m-auto">
         <Image src={moodboard} alt="moodboard brugt som inspiration til GeoHaus" class="w-[500px]" />
-        <p class="italic text-sm text-right">Moodboard</p>
+        <p class="italic text-end">Moodboard</p>
       </div>
+    </div>
+    <div class="grid grid-cols-2 gap-x-12 mt-10 md:mt-20 om2">
+      <Image src={skitse} alt="" class="col-start-1 col-span-1 w-[350px] justify-self-end" />
+      <p class="col-start-1 col-span-1 row-start-2 justify-self-end italic">Skitser</p>
+      <Image src={skitse2} alt="" class="col-start-2 col-span-1 w-[350px]" />
     </div>
   </section>
   <section id="inspo" class="max-w-7xl mx-auto grid grid-cols-12 mt-32 lg:mt-52 mb-20">
@@ -59,9 +66,15 @@ import g from "../assets/images/letter-g-3d.webp";
     inviewelementet2.classList.add("fade-in-bottom");
   });
 
-  // Inview animation inspo
-  const inviewelementet3 = document.querySelector("#inspo");
+  // Inview animation om
+  const inviewelementet3 = document.querySelector(".om2");
   inView(inviewelementet3, () => {
     inviewelementet3.classList.add("fade-in-bottom");
+  });
+
+  // Inview animation inspo
+  const inviewelementet4 = document.querySelector("#inspo");
+  inView(inviewelementet4, () => {
+    inviewelementet4.classList.add("fade-in-bottom");
   });
 </script>
