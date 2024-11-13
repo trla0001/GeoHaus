@@ -16,9 +16,9 @@ import g from "../assets/images/letter-g-3d.webp";
     <Image src={geohaus} alt="GeoHaus logo" />
   </section>
   <section id="om" class="max-w-7xl mx-auto mt-32 lg:mt-52">
-    <h2 class="md:text-center max-w-prose mx-auto">En display font der er inspireret af Bauhaus-stilens enkle og geometriske udtryk. Den bruger gentagne, parallelle linjer til at skabe mønstre og former.</h2>
+    <h2 class="md:text-center max-w-prose mx-auto citat">En display font der er inspireret af Bauhaus-stilens enkle og geometriske udtryk. Den bruger gentagne, parallelle linjer til at skabe mønstre og former.</h2>
 
-    <div class="grid md:grid-cols-2 mt-32 lg:mt-52">
+    <div class="grid md:grid-cols-2 mt-32 lg:mt-52 om">
       <article class="content-center max-w-prose">
         <h1 class="">Om GeoHaus</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
@@ -39,3 +39,29 @@ import g from "../assets/images/letter-g-3d.webp";
     <div class="col-span-12 row-start-6"><Image src={neon} alt="" /></div>
   </section>
 </MainLayout>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  // Entrance
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
+  // Inview animation citat
+  const inviewelementet = document.querySelector(".citat");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("fade-in-bottom");
+  });
+
+  // Inview animation om
+  const inviewelementet2 = document.querySelector(".om");
+  inView(inviewelementet2, () => {
+    inviewelementet2.classList.add("fade-in-bottom");
+  });
+
+  // Inview animation inspo
+  const inviewelementet3 = document.querySelector("#inspo");
+  inView(inviewelementet3, () => {
+    inviewelementet3.classList.add("fade-in-bottom");
+  });
+</script>
